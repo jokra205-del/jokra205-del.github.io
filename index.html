@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مجتبى علي محمد غلام - مبرمج وتقني عراقي</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #00ADB5;
+            --text-color: #EEEEEE;
+            --bg-color: #222831;
+            --card-bg: #393E46;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--card-bg));
+            border-radius: 15px;
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+        header p {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            border-right: 4px solid var(--accent-color);
+            padding-right: 10px;
+            font-size: 1.5rem;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            margin-bottom: 12px;
+            padding-right: 15px;
+            position: relative;
+        }
+        li::before {
+            content: "✦";
+            position: absolute;
+            right: 0;
+            color: var(--accent-color);
+        }
+        .family-card {
+            background: rgba(0, 173, 181, 0.1);
+            border: 1px solid var(--accent-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+        /* أزرار لوحة التحكم السرية */
+        .admin-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999;
+            display: flex;
+            gap: 10px;
+        }
+        .admin-btn {
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .admin-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        .save-btn {
+            background-color: #28a745;
+            display: none;
+        }
+        /* ستايل عند تفعيل وضع التعديل */
+        [contenteditable="true"] {
+            outline: 2px dashed var(--accent-color);
+            padding: 4px;
+            border-radius: 4px;
+            background: rgba(0, 173, 181, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- الهيدر والتعريف الأساسي -->
+        <header>
+            <h1 id="main-title">مجتبى علي محمد غلام</h1>
+            <p id="sub-title">صانع برامج ومصمم صور ومهتم بالصيانة والتقنية</p>
+        </header>
+
+        <!-- النبذة الشخصية -->
+        <section>
+            <h2>من أنا؟</h2>
+            <p id="about-text">شاب عراقي شغوف بعوالم البرمجة والتكنولوجيا. أسعى لتطوير مهاراتي باستمرار والمساهمة في بناء حلول برمجية ذكية وتصاميم رقمية متميزة تمثل جيل التكنولوجيا الصاعد في العراق.</p>
+        </section>
+
+        <!-- المهارات والاهتمامات -->
+        <section>
+            <h2>المهارات والاهتمامات التقنية</h2>
+            <ul id="skills-list">
+                <li><strong>صناعة البرامج والأتمتة:</strong> تطوير وبناء برمجيات وأدوات ذكية وأتمتة المهام البرمجية باستخدام لغات العصر.</li>
+                <li><strong>صيانة الحاسبات والعتاد:</strong> مهتم بقطع الحاسوب، تجميع الأجهزة، استكشاف الأخطاء البرمجية والصلبة وإصلاحها.</li>
+                <li><strong>التصميم الرقمي وتعديل الصور:</strong> دمج اللمسة الفنية مع التقنية لتصميم وتعديل الصور الرقمية بشكل مميز.</li>
+                <li><strong>التداول وأسواق المال:</strong> مهتم ومبتدئ في فهم أسواق المال والسعي لربط مهارات البرمجة بمؤشرات التحليل الفني.</li>
+            </ul>
+        </section>
+
+        <!-- الرابط العائلي الإبداعي الفخور -->
+        <section>
+            <h2>الإرث الفني والعائلي</h2>
+            <p id="family-intro">ينتمي مجتبى لعائلة عراقية مبدعة تجمع بين عراقة الفن وأصالة الكلمة، وبين حداثة التكنولوجيا وعلوم المستقبل.</p>
+            <div class="family-card">
+                <h3 id="aunt-title">عمتي: الفنانة التشكيلية والأديبة منى محمد غلام</h3>
+                <p id="aunt-desc" style="margin-top: 8px;">خريجة كلية الفنون الجميلة بجامعة بغداد، ولها تاريخ حافل ومميز في تصميم المطبوعات الصحفية، ورسوم الأطفال، وكتابة القصة والشعر، والمشاركة في كبرى المعارض التشكيلية داخل العراق وخارجه.</p>
+            </div>
+        </section>
+
+        <!-- الفوتر -->
+        <footer>
+            جميع الحقوق محفوظة © مجتبى علي محمد غلام - <span id="year-text">2026</span>
+        </footer>
+    </div>
+
+    <!-- أزرار التحكم السرية أسفل الشاشة -->
+    <div class="admin-controls">
+        <button class="admin-btn" id="editToggleBtn" onclick="toggleEditMode()">وضع التعديل 🔒</button>
+        <button class="admin-btn save-btn" id="saveCodeBtn" onclick="saveNewCode()">تحميل الكود الجديد 💾</button>
+    </div>
+
+    <script>
+        // الرمز السري الخاص بك (يمكنك تغييره هنا)
+        const SECRET_PASSWORD = "123"; 
+        let isEditMode = false;
+
+        function toggleEditMode() {
+            if (!isEditMode) {
+                // طلب الرمز السري عند محاولة الدخول
+                let password = prompt("أدخل الرمز السري لتفعيل التعديل:");
+                if (password === SECRET_PASSWORD) {
+                    isEditMode = true;
+                    document.getElementById('editToggleBtn').innerText = "قفل التعديل 🔓";
+                    document.getElementById('editToggleBtn').style.backgroundColor = "#dc3545";
+                    document.getElementById('saveCodeBtn').style.display = "block";
+                    
+                    // جعل العناصر قابلة للتعديل
+                    enableEditable(true);
+                    alert("تم تفعيل وضع التعديل! يمكنك الآن الضغط على أي نص ومسحه أو الكتابة بدله مباشرة.");
+                } else {
+                    alert("الرمز السري خطأ! لا يمكن التعديل.");
+                }
+            } else {
+                // إغلاق وضع التعديل
+                isEditMode = false;
+                document.getElementById('editToggleBtn').innerText = "وضع التعديل 🔒";
+                document.getElementById('editToggleBtn').style.backgroundColor = "var(--accent-color)";
+                document.getElementById('saveCodeBtn').style.display = "none";
+                enableEditable(false);
+            }
+        }
+
+        function enableEditable(status) {
+            // تحديد كل النصوص والعناصر القابلة للتعديل
+            const editableIds = ['main-title', 'sub-title', 'about-text', 'family-intro', 'aunt-title', 'aunt-desc', 'year-text'];
+            editableIds.forEach(id => {
+                document.getElementById(id).contentEditable = status;
+            });
+
+            // جعل عناصر القائمة القابلة للتعديل
+            const listItems = document.querySelectorAll('#skills-list li');
+            listItems.forEach(item => {
+                item.contentEditable = status;
+            });
+        }
+
+        function saveNewCode() {
+            // إلغاء وضع التعديل أولاً لتنظيف الكود من الخطوط المتقطعة قبل الحفظ
+            enableEditable(false);
+            
+            // إخفاء الأزرار مؤقتاً داخل الكود المحفوظ لكي لا تظهر بالنسخة النظيفة إذا أردت
+            // ولكن سنتركها مفعلة لكي تستخدمها دائماً
+            
+            // الحصول على كود الصفحة الكامل الحالي بعد التعديل
+            let currentCode = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            
+            // إعادة الوضع كما كان
+            enableEditable(true);
+
+            // صنع ملف تحميل تلقائي للمستخدم بكود الـ HTML الجديد
+            let blob = new Blob([currentCode], { type: "text/html" });
+            let a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "index.html";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            alert("ممتاز! تم تحميل ملف index.html المعدل الجديد إلى حاسبتك. الآن كل ما عليك فعله هو أخذ هذا الملف الجديد وضغطه ZIP ورفعه على tiiny.host ليتحدث للناس بالرابط الجديد!");
+        }
+    </script>
+
+</body>
+</html>
