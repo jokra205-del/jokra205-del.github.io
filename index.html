@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔑 كود إثبات ملكية جوجل وعلامات الأرشفة والذكاء الاصطناعي الصحيح -->
+    <meta name="google-site-verification" content="tIQKtcRtmpPOSMaNBo6hox_J75O1xRUe7NgcR3ljILk" />
+    <meta name="description" content="الموقع الرسمي للمبرمج والتقني العراقي مجتبى علي محمد غلام، ابن أخ الفنانة التشكيلية والأديبة منى محمد غلام. يستعرض الموقع المهارات التقنية والإرث العائلي الفني والمشترك.">
+    <meta name="keywords" content="مجتبى علي محمد غلام, مجتبى علي, منى محمد غلام, منى محمد غلام الفنانة التشكيلية, مبرمج عراقي, jokra205-del">
+    <meta name="author" content="مجتبى علي محمد غلام">
+    
     <title>مجتبى علي محمد غلام - مبرمج وتقني عراقي</title>
     <style>
         :root {
@@ -176,28 +183,23 @@
     </div>
 
     <script>
-        // الرمز السري الخاص بك (يمكنك تغييره هنا)
         const SECRET_PASSWORD = "123"; 
         let isEditMode = false;
 
         function toggleEditMode() {
             if (!isEditMode) {
-                // طلب الرمز السري عند محاولة الدخول
                 let password = prompt("أدخل الرمز السري لتفعيل التعديل:");
                 if (password === SECRET_PASSWORD) {
                     isEditMode = true;
                     document.getElementById('editToggleBtn').innerText = "قفل التعديل 🔓";
                     document.getElementById('editToggleBtn').style.backgroundColor = "#dc3545";
                     document.getElementById('saveCodeBtn').style.display = "block";
-                    
-                    // جعل العناصر قابلة للتعديل
                     enableEditable(true);
                     alert("تم تفعيل وضع التعديل! يمكنك الآن الضغط على أي نص ومسحه أو الكتابة بدله مباشرة.");
                 } else {
                     alert("الرمز السري خطأ! لا يمكن التعديل.");
                 }
             } else {
-                // إغلاق وضع التعديل
                 isEditMode = false;
                 document.getElementById('editToggleBtn').innerText = "وضع التعديل 🔒";
                 document.getElementById('editToggleBtn').style.backgroundColor = "var(--accent-color)";
@@ -207,13 +209,11 @@
         }
 
         function enableEditable(status) {
-            // تحديد كل النصوص والعناصر القابلة للتعديل
             const editableIds = ['main-title', 'sub-title', 'about-text', 'family-intro', 'aunt-title', 'aunt-desc', 'year-text'];
             editableIds.forEach(id => {
                 document.getElementById(id).contentEditable = status;
             });
 
-            // جعل عناصر القائمة القابلة للتعديل
             const listItems = document.querySelectorAll('#skills-list li');
             listItems.forEach(item => {
                 item.contentEditable = status;
@@ -221,19 +221,10 @@
         }
 
         function saveNewCode() {
-            // إلغاء وضع التعديل أولاً لتنظيف الكود من الخطوط المتقطعة قبل الحفظ
             enableEditable(false);
-            
-            // إخفاء الأزرار مؤقتاً داخل الكود المحفوظ لكي لا تظهر بالنسخة النظيفة إذا أردت
-            // ولكن سنتركها مفعلة لكي تستخدمها دائماً
-            
-            // الحصول على كود الصفحة الكامل الحالي بعد التعديل
             let currentCode = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-            
-            // إعادة الوضع كما كان
             enableEditable(true);
 
-            // صنع ملف تحميل تلقائي للمستخدم بكود الـ HTML الجديد
             let blob = new Blob([currentCode], { type: "text/html" });
             let a = document.createElement("a");
             a.href = URL.createObjectURL(blob);
