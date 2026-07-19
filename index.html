@@ -70,20 +70,27 @@
         .info-list strong { 
             color: var(--primary-color); 
         }
+        .instagram-container {
+            text-align: center;
+            margin: 25px 0;
+        }
         .instagram-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
             color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            margin-top: 15px;
-            transition: opacity 0.2s;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
         }
         .instagram-btn:hover {
-            opacity: 0.9;
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6);
         }
         .footer { 
             text-align: center; 
@@ -109,10 +116,13 @@
         </ul>
 
         <h2>التواصل الاجتماعي الرسمي</h2>
-        <p>لمتابعة أعمالي البرمجية واليومية أو للتواصل المهني، يمكنك زيارة حسابي الرسمي والوحيد على منصة إنستقرام عبر الرابط التالي:</p>
-        <a href="https://instagram.com/1JIT" target="_blank" class="instagram-btn">
-            حسابي على إنستقرام (@1jit)
-        </a>
+        <p>لمتابعة أعمالي البرمجية واليومية أو للتواصل المهني، يمكنك زيارة حسابي الرسمي والوحيد على منصة إنستقرام عبر الزر المباشر أدناه:</p>
+        
+        <div class="instagram-container">
+            <a href="https://www.instagram.com/1jit/" target="_blank" class="instagram-btn">
+                زيارة الانستغرام ومتابعة الحساب
+            </a>
+        </div>
 
         <h2>الإرث العائلي والثقافي</h2>
         <p>أفخر بالروابط العائلية الوثيقة التي تجمعني بعمتي الفنانة التشكيلية والأديبة العراقية الراحلة <strong>منى محمد غلام</strong>. أسعى من خلال مشاريعي التقنية إلى تقديم حلول برمجية حديثة تدمج بين الجوانب الإبداعية والتقنية المعاصرة.</p>
